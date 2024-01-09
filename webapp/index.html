@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<body>
+  <h1>pass - Scroll</h1>
+  <h2><i>Anon ticketing with Scroll & Noir Verifier</i></h2>
+  <input id="connect_button" type="button" value="Connect" onclick="connectWallet()" style="display: none"></input>
+  <p id="account_address" style="display: none"></p>
+  <p id="web3_message"></p>
+  <p id="contract_state"></p>
+
+  <div id="qrcode"></div>
+
+  <h3>Get a Devcon Ticket Proof</h3>
+  <input type="button" value="Send" onclick="_sendDevconTicket()"></input>
+  <h3>Get a Zuzalu Proof</h3>
+  <input type="button" value="Send" onclick="_sendZuzalu()"></input>
+  <h3>Get an ETH Global Proof</h3>
+  <input type="button" value="Send" onclick="_sendETHGlobal()"></input>
+
+  <div id="comments"></div>
+
+  <p id="public_input"></p>
+  <p id="proof"></p>
+
+  <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+      </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.5/web3.min.js"></script>
+  <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ethereumjs/browser-builds/dist/ethereumjs-tx/ethereumjs-tx-1.3.3.min.js"></script>
+  <script type="module" src="/app.js"></script>
+</body>
+
+<script>
+  function _sendDevconTicket()
+  {
+    sendProof("Devcon Ticket")
+  }
+
+  function _sendZuzalu()
+  {
+    sendProof("Zuzalu Ticket")
+  }
+
+  function _sendETHGlobal()
+  {
+    sendProof("ETH Global Ticket")
+  }
+</script>
+
+</html>
